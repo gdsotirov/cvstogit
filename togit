@@ -1,0 +1,51 @@
+#!/bin/sh
+# A script for automating CVS to Git migration with cvs2git command
+
+if [ "$1" == "" ]; then
+  echo "Usage: $0 <path.to.cvs.repo>"
+  exit 0
+fi
+
+REPOPATH=$1
+
+if [ ! -e ${REPOPATH} ]; then
+  echo "Error: Path '${REPOPATH}' does not exist!"
+  exit 1
+fi
+
+if [ ! -d ${REPOPATH} ]; then
+  echo "Error: Path '${REPOPATH}' is not a directory!"
+  exit 2
+fi
+
+CWD=$(pwd)
+TMPDIR="${CWD}/cvs2git-tmp"
+REPONAME=$(basename ${REPOPATH})
+
+# Convert CVS repository to Git
+
+#cvs2git --blobfile=${TMPDIR}/${REPONAME}-blob.dat \
+#        --dumpfile=${TMPDIR}/${REPONAME}-dump.dat \
+#        "${REPOPATH}"
+
+# Prepare options file
+cat ${CWD}/cvs2git.options | \
+  sed -e "s/git\-dump.dat/${REPONAME}\-dump.dat/" \
+      -e "s/git\-blob.dat/${REPONAME}\-blob.dat/" \
+      -e "s|r'test\-data\/main\-cvsrepos'\,|r'${REPOPATH}',|" > ${CWD}/cvs2git.options.${REPONAME}
+cvs2git --options=cvs2git.options.${REPONAME}
+
+# Initialize bare git repo
+
+mkdir -p "${CWD}/${REPONAME}.git"
+(cd ${CWD}/${REPONAME}.git; git init --bare)
+
+# Load the dumps into the repo
+
+(cd ${CWD}/${REPONAME}.git;
+ cat ${TMPDIR}/${REPONAME}-blob.dat ${TMPDIR}/${REPONAME}-dump.dat | git fast-import )
+
+# Clone the bare Git repo
+
+(cd ${CWD}; git clone ${REPONAME}.git ${REPONAME})
+

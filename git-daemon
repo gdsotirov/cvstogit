@@ -1,0 +1,7 @@
+#!/bin/sh
+# Run git daemon in local directory for using it with GitHub Importer
+
+CWD=`pwd`
+
+git daemon --verbose --export-all --base-path="${CWD}"
+
