@@ -112,6 +112,7 @@ from cvs2svn_lib.property_setters import ExecutablePropertySetter
 from cvs2svn_lib.property_setters import KeywordsPropertySetter
 from cvs2svn_lib.property_setters import MimeMapper
 from cvs2svn_lib.property_setters import SVNBinaryFileKeywordsPropertySetter
+from cvs2svn_lib.keyword_expander import _KeywordExpander
 
 # To choose the level of logging output, uncomment one of the
 # following lines:
@@ -460,9 +461,13 @@ ctx.file_property_setters.extend([
     ConditionalPropertySetter(
         cvs_file_is_binary, KeywordHandlingPropertySetter('untouched'),
         ),
-    KeywordHandlingPropertySetter('collapsed'),
+    KeywordHandlingPropertySetter('expanded'),
 
     ])
+
+# Ensure dates are expanded as YYYY/MM/DD as in CVS 1.11
+_KeywordExpander.use_old_date_format()
+
 ctx.revision_property_setters.extend([
     ])
 
@@ -519,11 +524,7 @@ ctx.retain_conflicting_attic_files = False
 # (name, email).  Please substitute your own project's usernames here
 # to use with the author_transforms option of GitOutputOption below.
 author_transforms={
-    'jrandom' : ('J. Random', 'jrandom@example.com'),
-    'mhagger' : 'Michael Haggerty <mhagger@alum.mit.edu>',
-    'brane' : (u'Branko Čibej', 'brane@xbc.nu'),
-    'ringstrom' : 'Tobias Ringström <tobias@ringstrom.mine.nu>',
-    'dionisos' : (u'Erik Hülsmann', 'e.huelsmann@gmx.net'),
+    'gsotirov' : 'Georgi D. Sotirov <gdsotirov@dir.bg>',
 
     # This one will be used for commits for which CVS doesn't record
     # the original author, as explained above.
