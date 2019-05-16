@@ -1,0 +1,28 @@
+#!/bin/bash
+# Checkout Git repositories at the point of migration
+
+CWD=$(pwd)
+
+function checkout_migr() {
+  repo=${1}
+
+  cd "${repo}"
+  GIT_TAG=$(git describe --tags --exact-match 2>&1)
+  if [ "${GIT_TAG}" != "GIT_MIGR" ]; then
+    echo -n "Checking out GIT_MIGR in '${repo}'... "
+    git checkout GIT_MIGR &>/dev/null
+    if (( $? == 0 )); then
+      echo "Done."
+    else
+      echo "FAIL!"
+    fi
+  else
+    echo "Repository '${repo}' already at GIT_MIGR."
+  fi
+  cd "${CWD}"
+}
+
+for repo in `find . -type d -name '.git' -not -path '*/forks/*' | sort`; do
+  checkout_migr $(dirname ${repo})
+done
+
