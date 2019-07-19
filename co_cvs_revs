@@ -1,0 +1,16 @@
+#!/bin/sh
+# Checkout revisions of a corroupted file in CVS one by one in reverse
+# order to find the problematic revision that could not be checked out
+
+FILE=$1
+
+for rev in `seq 65 -1 1`; do
+  echo -n "Checking out revision 1.${rev} ... "
+  cvs -Q -f -d :local:/var/cvs/repos/public co -r1.${rev} -p -kb ${FILE} &>/dev/null
+  if [ $? == 0 ]; then
+    echo "DONE."
+  else
+    echo "FAIL!"
+  fi
+done
+

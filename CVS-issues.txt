@@ -1,0 +1,79 @@
+Error: cvs: double free or corruption
+Full log: 
+*** Error in `cvs': double free or corruption (!prev): 0x0000000000ca1ca0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x776f4)[0x7fc6c45b46f4]
+/lib64/libc.so.6(+0x7ff4a)[0x7fc6c45bcf4a]
+/lib64/libc.so.6(cfree+0x4c)[0x7fc6c45c0c1c]
+cvs[0x4346e6]
+cvs[0x43ae54]
+cvs[0x43b73f]
+cvs[0x451e88]
+cvs[0x4532d1]
+cvs[0x44101d]
+cvs[0x420c21]
+cvs[0x44045d]
+cvs[0x4411ba]
+cvs[0x420c21]
+cvs[0x4416d9]
+cvs[0x450f7c]
+cvs[0x40c729]
+cvs[0x42eb8a]
+cvs[0x42f87d]
+cvs[0x40b642]
+cvs[0x404d22]
+/lib64/libc.so.6(__libc_start_main+0xf0)[0x7fc6c455d7d0]
+cvs[0x404ff5]
+======= Memory map: ========
+00400000-0049b000 r-xp 00000000 08:07 132126                             /usr/bin/cvs
+0069b000-006a2000 rw-p 0009b000 08:07 132126                             /usr/bin/cvs
+006a2000-006a3000 rw-p 00000000 00:00 0
+00c92000-00cb3000 rw-p 00000000 00:00 0                                  [heap]
+7fc6c0000000-7fc6c0021000 rw-p 00000000 00:00 0
+7fc6c0021000-7fc6c4000000 ---p 00000000 00:00 0
+7fc6c4326000-7fc6c433c000 r-xp 00000000 08:07 22609                      /usr/lib64/libgcc_s.so.1
+7fc6c433c000-7fc6c453b000 ---p 00016000 08:07 22609                      /usr/lib64/libgcc_s.so.1
+7fc6c453b000-7fc6c453c000 r--p 00015000 08:07 22609                      /usr/lib64/libgcc_s.so.1
+7fc6c453c000-7fc6c453d000 rw-p 00016000 08:07 22609                      /usr/lib64/libgcc_s.so.1
+7fc6c453d000-7fc6c46fd000 r-xp 00000000 08:02 20380                      /lib64/libc-2.23.so
+7fc6c46fd000-7fc6c48fc000 ---p 001c0000 08:02 20380                      /lib64/libc-2.23.so
+7fc6c48fc000-7fc6c4900000 r--p 001bf000 08:02 20380                      /lib64/libc-2.23.so
+7fc6c4900000-7fc6c4902000 rw-p 001c3000 08:02 20380                      /lib64/libc-2.23.so
+7fc6c4902000-7fc6c4906000 rw-p 00000000 00:00 0
+7fc6c4906000-7fc6c491c000 r-xp 00000000 08:02 20346                      /lib64/libnsl-2.23.so
+7fc6c491c000-7fc6c4b1c000 ---p 00016000 08:02 20346                      /lib64/libnsl-2.23.so
+7fc6c4b1c000-7fc6c4b1d000 r--p 00016000 08:02 20346                      /lib64/libnsl-2.23.so
+7fc6c4b1d000-7fc6c4b1e000 rw-p 00017000 08:02 20346                      /lib64/libnsl-2.23.so
+7fc6c4b1e000-7fc6c4b20000 rw-p 00000000 00:00 0
+7fc6c4b20000-7fc6c4b29000 r-xp 00000000 08:02 20306                      /lib64/libcrypt-2.23.so
+7fc6c4b29000-7fc6c4d28000 ---p 00009000 08:02 20306                      /lib64/libcrypt-2.23.so
+7fc6c4d28000-7fc6c4d29000 r--p 00008000 08:02 20306                      /lib64/libcrypt-2.23.so
+7fc6c4d29000-7fc6c4d2a000 rw-p 00009000 08:02 20306                      /lib64/libcrypt-2.23.so
+7fc6c4d2a000-7fc6c4d58000 rw-p 00000000 00:00 0
+7fc6c4d58000-7fc6c4d7d000 r-xp 00000000 08:02 24324                      /lib64/ld-2.23.so
+7fc6c4f37000-7fc6c4f3a000 rw-p 00000000 00:00 0
+7fc6c4f6f000-7fc6c4f70000 rw-p 00000000 00:00 0
+7fc6c4f70000-7fc6c4f7c000 rw-p 00001000 08:21 159386004                  /var/cvs/repos/public/projects/web/slackpack/SlackPack/Package.pm,v
+7fc6c4f7c000-7fc6c4f7d000 rw-p 00000000 00:00 0
+7fc6c4f7d000-7fc6c4f7e000 r--p 00025000 08:02 24324                      /lib64/ld-2.23.so
+7fc6c4f7e000-7fc6c4f7f000 rw-p 00026000 08:02 24324                      /lib64/ld-2.23.so
+7fc6c4f7f000-7fc6c4f80000 rw-p 00000000 00:00 0
+7ffc92a9a000-7ffc92abb000 rw-p 00000000 00:00 0                          [stack]
+7ffc92bcb000-7ffc92bce000 r--p 00000000 00:00 0                          [vvar]
+7ffc92bce000-7ffc92bd0000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+ERROR: The command 'cvs -Q -f -d :local:/var/cvs/repos/public co -r1.1 -p -kb projects/web/slackpack/SlackPack/Package.pm' failed with exit status=1
+and the following output:
+cvs [checkout aborted]: received abort signal
+
+URL: https://bbs.archlinux.org/viewtopic.php?id=24222
+Solution: export MALLOC_CHECK_=0
+
+Error: cvs: invalid change text in
+Full log: cvs -Q -f -d :local:/var/cvs/repos/public co -r1.1 -p -kb projects/web/slackpack/SlackPack/Package.pm
+cvs [checkout aborted]: invalid change text in /var/cvs/repos/public/projects/web/slackpack/SlackPack/Package.pm,v
+
+Solution: checkout revisions in reverse order to find the problematic one and
+          then fix the version file
+
+
