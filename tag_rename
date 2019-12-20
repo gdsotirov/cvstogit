@@ -1,0 +1,10 @@
+#!/bin/sh
+# Batch rename tags in a Git repo
+
+for tag in `git tag -l | grep bugzilla-bg`; do
+  echo -n "Renaming tag ${tag} to ${tag/bugzilla-bg-/}..."
+  git tag ${tag/bugzilla-bg-/} ${tag}
+  git tag -d ${tag}
+  echo "Done."
+done
+
