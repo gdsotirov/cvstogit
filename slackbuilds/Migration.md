@@ -6,18 +6,19 @@ Description of CVS to Git migration of my Slackware build scripts collection.
 
 The project is a collection of shell scripts for building various programs and
 libraries for Slackware Linux 10.2 and above. Each build script named as
-`software.SlackBuild` is acompanied by one or more of the following files:
+`software.SlackBuild` is acompanied by one or more of the following files
+all of which are considered sources:
 
-* README - Readme for the packages without README file (text file);
-* doinst.sh - Post installation script (bash script);
-* slack-conflicts - List of conflicting packages (text file);
-* slack-desc - Package description (text file);
-* slack-required - List of required packages (text file);
-* slack-suggests - List of optional packages (text file);
-* *.diff - Patches (text files);
-* rc.* - Runtime configuration files (bash scripts);
-* *.desktop - Menu configuration files (text files);
-* profile.d/ - Bash profile configuration files (bash scripts).
+* `README` - Readme for the packages without README file (text file);
+* `doinst.sh` - Post installation script (bash script);
+* `slack-conflicts` - List of conflicting packages (text file);
+* `slack-desc` - Package description (text file);
+* `slack-required` - List of required packages (text file);
+* `slack-suggests` - List of optional packages (text file);
+* `*.diff` - Patches (text files);
+* `rc.*` - Runtime configuration files (bash scripts);
+* `*.desktop` - Menu configuration files (text files);
+* `profile.d/` - Bash profile configuration files (bash scripts).
 
 And put into a folder with the name of the software.
 
@@ -32,6 +33,7 @@ this means also to create a meta repository with the common files (e.g.
 incorporates all other repositories. The proposed structure is the
 following:
 
+```
 slackbuilds
 ├── COPYING
 ├── README.md
@@ -51,6 +53,7 @@ slackbuilds
 ├── xap
 └── y
     └── softN
+```
 
 # Problems
 
@@ -58,13 +61,14 @@ slackbuilds
    file `slack-package.conf` inherited from linuxpackages.net, witout which
    the build script cannot run.
 
-2. 
+2. TODO
 
-3. Some directories already contain README file (see list below). If these are
-   going into dedicated repositories with README file there would be name
+3. Some directories already contain `README` file (see list below). If these are
+   going into dedicated repositories with `README` file there would be name
    collision.
 
-```$ find . -type f -name 'README'
+```
+$ find . -type f -name 'README'
 ./d/cffi/README
 ./xap/skype/README
 ./xap/libreoffice-helppack/README
@@ -80,12 +84,13 @@ slackbuilds
 ./l/libebml/README
 ```
 
-**Solution**: A possible solution is to create the repository README file as
-README.md, so to avoid collision. Markdown exists since 2004.
+**Solution**: A possible solution is to create the repository `README` file as
+`README.md`, so to avoid collision. Markdown exists since 2004.
 
-4. And some other also contain COPYING file.
+4. And some other also contain `COPYING` file.
 
-```$ find . -type f -name 'COPYING'
+```
+$ find . -type f -name 'COPYING'
 ./audio/jack/COPYING
 ./xap/libreoffice-langpack/COPYING
 ./xap/libreoffice/COPYING
@@ -100,7 +105,7 @@ README.md, so to avoid collision. Markdown exists since 2004.
 ./l/tinyxml/COPYING
 ```
 
-**Solution**: A possible solution is to create the repository COPYING file as
-LICENSE, but it should be checked how [Licensee](https://github.com/licensee/licensee)
+**Solution**: A possible solution is to create the repository `COPYING` file as
+`LICENSE`, but it should be checked how [Licensee](https://github.com/licensee/licensee)
 would interpret both files.
 
