@@ -150,7 +150,8 @@ $ find . -type f -name 'README'
 ```
 
 **Solution**: A possible solution is to create the repository `README` file as
-`README.md`, so to avoid collision. Markdown exists since 2004.
+`README.md`, so to avoid collision. Markdown exists since 2004. Or simply
+rename the original `README` for the software in the package to `README.in`.
 
 4. And some other also contain `COPYING` file.
 
