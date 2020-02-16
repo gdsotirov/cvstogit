@@ -6,7 +6,7 @@ Description of CVS to Git migration of my Slackware build scripts collection.
 
 The project is a collection of shell scripts for building various programs and
 libraries for Slackware Linux 10.2 and above. Each build script named as
-`software.SlackBuild` is acompanied by one or more of the following files
+`software.SlackBuild` is accompanied by one or more of the following files
 all of which are considered sources:
 
 * `README` - Readme for the packages without README file (text file);
@@ -15,7 +15,7 @@ all of which are considered sources:
 * `slack-desc` - Package description (text file);
 * `slack-required` - List of required packages (text file);
 * `slack-suggests` - List of optional packages (text file);
-* `*.diff` - Patches (text files);
+* `*.diff`, `*.patch` - Patches (text files);
 * `rc.*` - Runtime configuration files (bash scripts);
 * `*.desktop` - Menu configuration files (text files);
 * `profile.d/` - Bash profile configuration files (bash scripts).
@@ -25,8 +25,8 @@ And put into a folder with the name of the software.
 ## Migration
 
 Since the different directories with Slackware build scripts have quite
-different history following software's realese history it would be most
-appropraite to migrate each folder as a separate Git repository. However,
+different history following software's release history it would be most
+appropriate to migrate each folder as a separate Git repository. However,
 this means also to create a meta repository with the common files (e.g.
 `slack-package.conf`) into another repository that through
 [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
@@ -123,7 +123,7 @@ And so on and so on.
 # Problems
 
 1. Repositories are not self contained. The build scripts depend on the common
-   file `slack-package.conf` inherited from linuxpackages.net, witout which
+   file `slack-package.conf` inherited from linuxpackages.net, without which
    the build script cannot run.
 
 2. TODO
