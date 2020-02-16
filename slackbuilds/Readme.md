@@ -1,4 +1,4 @@
-# SlackBuilds - Migration to CVS
+# SlackBuilds - Migration to Git
 
 Description of CVS to Git migration of my Slackware build scripts collection.
 
