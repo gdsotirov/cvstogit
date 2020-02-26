@@ -171,7 +171,10 @@ $ find . -type f -name 'COPYING'
 ./l/tinyxml/COPYING
 ```
 
-**Solution**: A possible solution is to create the repository `COPYING` file as
-`LICENSE`, but it should be checked how [Licensee](https://github.com/licensee/licensee)
-would interpret both files.
+**Solution**: [Licensee](https://github.com/licensee/licensee) apparently
+[considers](https://github.com/licensee/licensee/blob/master/docs/what-we-look-at.md)
+any text file named `LICENSE*` or `COPYING*`, so renaming the old `COPYING`
+file won't stop it from looking into the file. Therefore, the license file
+for the packaged software should be named neutrally as `PKGLIC`' (i.e.
+shortened from PACKAGE LICENSE) or otherwise.
 
