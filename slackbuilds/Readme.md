@@ -178,3 +178,37 @@ file won't stop it from looking into the file. Therefore, the license file
 for the packaged software should be named neutrally as `PKGLIC`' (i.e.
 shortened from PACKAGE LICENSE) or otherwise (e.g. BSDLIC, GPLLIC, etc.).
 
+5. There are some packages without build script. These only have description
+   file and eventually requirements file. This is the list:
+
+| Package | Version | Timestamp | Slackware | SlackBuild | Description | Requirements |
+| --- | --- | --- | --- | --- | --- | --- |
+| gd | 2.0.33 | 2005-01-23 14:48:00 | 99999 | no | yes | yes |
+| ksensors | 0.7.3 | 2005-03-05 23:45:00 | 99999 | no | yes | no |
+| konverter | 0.92b1 | 2005-03-13 13:00:00 | 99999 | no | yes | no |
+| neon | 0.24.7 | 2005-04-16 21:19:00 | 99999 | no | yes | yes |
+| redland | 0.9.16 | 2005-08-24 22:10:00 | 99999 | no | yes | no |
+| myodbc | 3.51.11 | 2005-10-02 17:28:00 | 99999 | no | yes | no |
+| myodbc | 3.51.12 | 2005-10-29 00:44:00 | 99999 | no | yes | no |
+| xawtv | 3.95 | 2006-01-25 15:51:00 | 102 | no | yes | no |
+| xawtv | 3.95 | 2006-01-29 11:24:00 | 102 | no | yes | no |
+| mysql-administrator | 1.1.6 | 2006-02-04 12:45:00 | 102 | no | yes | no |
+| bgoffice | 1.8 | 2006-02-07 20:45:00 | 102 | no | yes | no |
+| mysqlcc | 0.9.4 | 2006-02-12 21:35:00 | 102 | no | yes | no |
+| mysqlcc | 0.9.4 | 2006-02-13 13:39:42 | 102 | no | yes | no |
+| siefs | 0.5 | 2006-02-15 16:45:00 | 102 | no | yes | no |
+| siefs | 0.5 | 2006-02-20 19:48:00 | 102 | no | yes | yes |
+| mysql-query-browser | 1.1.18 | 2006-03-19 20:00:00 | 102 | no | yes | no |
+| kernel-headers | 2.6.15 | 2006-03-20 00:00:00 | 102 | no | yes | no |
+| mysql-query-browser | 1.1.12 | 2006-03-20 21:16:00 | 102 | no | yes | no |
+| mysql-query-browser | 1.1.18 | 2006-03-20 21:16:00 | 102 | no | yes | no |
+| kernel-headers | 2.6.16.1 | 2006-04-02 18:30:00 | 102 | no | yes | no |
+| kernel-headers | 2.6.17.1 | 2006-06-29 08:21:00 | 102 | no | yes | no |
+| kernel-headers | 2.6.20 | 2007-02-11 19:30:09 | 110 | no | yes | no |
+| kernel-headers | 2.6.20.3 | 2007-03-22 12:53:55 | 110 | no | yes | no |
+| kernel-headers | 2.6.21 | 2007-05-08 23:10:20 | 110 | no | yes | no |
+| kernel-headers | 2.6.28.7 | 2009-02-27 00:24:23 | 122 | no | yes | no |
+| kernel-headers | 2.6.30.1 | 2009-07-16 21:34:51 | 122 | no | yes | no |
+
+It does not seem it worth it to version these and migrate to Git.
+
