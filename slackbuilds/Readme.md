@@ -176,5 +176,5 @@ $ find . -type f -name 'COPYING'
 any text file named `LICENSE*` or `COPYING*`, so renaming the old `COPYING`
 file won't stop it from looking into the file. Therefore, the license file
 for the packaged software should be named neutrally as `PKGLIC`' (i.e.
-shortened from PACKAGE LICENSE) or otherwise.
+shortened from PACKAGE LICENSE) or otherwise (e.g. BSDLIC, GPLLIC, etc.).
 
