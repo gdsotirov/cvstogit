@@ -3,7 +3,7 @@
 # See [1] https://github.com/github/renaming
 # See [2] https://docs.github.com/en/github/administering-a-repository/renaming-a-branch
 
-# 1. Follow the steps from [1] to rename branc master to main in GitHub.
+# 1. Follow the steps from [1] to rename branch master to main in GitHub.
 
 # 2. Then execute the following commands:
 
