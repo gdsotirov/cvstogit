@@ -1,0 +1,24 @@
+#!/bin/sh
+# Rename branch master to main
+# See [1] https://github.com/github/renaming
+# See [2] https://docs.github.com/en/github/administering-a-repository/renaming-a-branch
+
+# 1. Follow the steps from [1] to rename branc master to main in GitHub.
+
+# 2. Then execute the following commands:
+
+# a. Rename local master branch to main
+git branch -m master main
+
+# b. Get objects and refs from remote
+git fetch origin
+
+# c. Set local main to track remote main
+git branch -u origin/main main
+
+# d. Delete stale origin/master reference
+git remote prune origin
+
+# e. Replace master with main in HEAD reference
+sed -i 's/master/main/' .git/refs/remotes/origin/HEAD
+
