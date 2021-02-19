@@ -27,8 +27,8 @@ And put into a folder with the name of the software.
 Since the different directories with Slackware build scripts have quite
 different history following software's release history it would be most
 appropriate to migrate each folder as a separate Git repository. However,
-this means also to create a meta repository with the common files (e.g.
-`slack-package.conf`) into another repository that through
+this means also to create a "superproject" repository with the common files
+(e.g. `slack-package.conf`) into another repository that through
 [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
 incorporates all other repositories. The proposed structure is the
 following:
