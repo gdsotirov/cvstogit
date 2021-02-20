@@ -25,7 +25,6 @@ echo_status() {
   fi
 }
 
-
 if [ ! -e .git -o ! -d .git ]; then
   echo "${C_RED}Error${C_NORMAL}: The current directory is NOT a Git repository!"
   exit 1
@@ -57,19 +56,19 @@ for tag_name in $(git tag -l | grep -E 'SLACK\-[0-9]{2}_[0-9][0-9]?'); do
     echo " ${C_BLUE}none found${C_NORMAL}."
 
     echo -n "    Removing local tag ${C_YELLOW}${tag_name}${C_NORMAL}... "
-    git tag --delete $tag_name 2>&1 >/dev/null
+    git tag --delete $tag_name >/dev/null 2>&1
     echo_status
 
     echo -n "    Removing remote tag ${C_YELLOW}${tag_name}${C_NORMAL}... "
-    git push --delete origin ${tag_name} 2>&1 >/dev/null
+    git push --delete origin ${tag_name} >/dev/null 2>&1
     echo_status
 
     echo -n "    Creating branch ${C_RED}${tag_name}${C_NORMAL} at ${tag_rev}... "
-    git branch ${tag_name} ${tag_rev} 2>&1 >/dev/null
+    git branch ${tag_name} ${tag_rev} >/dev/null 2>&1
     echo_status
 
     echo -n "    Pushing branch ${C_RED}${tag_name}${C_NORMAL} to remote... "
-    git push -u origin ${tag_name} 2>&1 >/dev/null
+    git push -u origin ${tag_name} >/dev/null 2>&1
     echo_status
   fi
 done
