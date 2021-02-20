@@ -1,0 +1,12 @@
+Date;Type;Name;Branch;Message;Repo
+2005-01-22 20:31:42 +0200;files;COPYING README;;Initial version;
+2005-01-22 20:48:22 +0200;submodule;net-snmp;SLACK-10_2;;https://github.com/gdsotirov/net-snmp.SlackBuild.git
+2005-03-03 17:25:16 +0200;submodule;hddtemp;SLACK-10_2;;https://github.com/gdsotirov/hddtemp.SlackBuild.git
+2005-03-11 23:01:00 +0200;submodule;mysql;SLACK-10_2;;https://github.com/gdsotirov/mysql.SlackBuild.git
+2005-03-12 15:06:01 +0200;submodule;php;SLACK-10_2;;https://github.com/gdsotirov/php.SlackBuild.git
+2005-03-14 20:58:42 +0200;submodule;ffmpeg;SLACK-10_2;;https://github.com/gdsotirov/ffmpeg.SlackBuild.git
+2005-03-15 21:51:31 +0200;submodule;divx4linux;SLACK-10_2;;https://github.com/gdsotirov/divx4linux.SlackBuild.git
+2005-03-15 22:28:37 +0200;submodule;faac;SLACK-10_2;;https://github.com/gdsotirov/faac.SlackBuild.git
+2005-03-15 22:44:40 +0200;submodule;faad2;SLACK-10_2;;https://github.com/gdsotirov/faad2.SlackBuild.git
+2005-03-16 19:56:03 +0200;submodule;avifile;SLACK-10_2;;https://github.com/gdsotirov/avifile.SlackBuild.git
+2005-03-16 20:41:08 +0200;submodule;a52dec;SLACK-10_3;;https://github.com/gdsotirov/a52dec.SlackBuild.git
