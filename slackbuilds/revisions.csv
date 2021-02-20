@@ -10,3 +10,11 @@ Date;Type;Name;Branch;Message;Repo
 2005-03-15 22:44:40 +0200;submodule;faad2;SLACK-10_2;;https://github.com/gdsotirov/faad2.SlackBuild.git
 2005-03-16 19:56:03 +0200;submodule;avifile;SLACK-10_2;;https://github.com/gdsotirov/avifile.SlackBuild.git
 2005-03-16 20:41:08 +0200;submodule;a52dec;SLACK-10_2;;https://github.com/gdsotirov/a52dec.SlackBuild.git
+2005-03-16 21:17:00 +0200;submodule;transcode;SLACK-10_2;;https://github.com/gdsotirov/transcode.SlackBuild.git
+2005-03-28 21:43:53 +0300;submodule;mailsend;SLACK-10_2;;https://github.com/gdsotirov/mailsend.SlackBuild.git
+2005-05-14 13:17:08 +0300;submodule;ddd;SLACK-10_2;;https://github.com/gdsotirov/ddd.SlackBuild.git
+2005-11-03 21:10:10 +0300;submodule;meld;SLACK-10_2;;https://github.com/gdsotirov/meld.SlackBuild.git
+2006-01-25 21:35:17 +0200;submodule;motion;SLACK-10_2;;https://github.com/gdsotirov/motion.SlackBuild.git
+2006-01-27 21:24:00 +0200;submodule;cvsgraph;SLACK-10_2;;https://github.com/gdsotirov/cvsgraph.SlackBuild.git
+2006-02-10 21:37:45 +0200;submodule;mysql-connector-odbc;SLACK-10_2;;https://github.com/gdsotirov/mysql-connector-odbc.SlackBuild.git
+2006-02-18 16:21:47 +0200;files;etc/slack-package.conf;;Add config from LinuxPackages.net with my changes;
