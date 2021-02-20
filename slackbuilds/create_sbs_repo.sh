@@ -8,39 +8,88 @@
 # submodules.
 #
 
-mkdir repo; cd repo
+CWD=$(pwd)
+REPO_DIR=repo
+REVN=0
 
-git init
+# Bash colors
+C_RED=$'\e[31;01m'
+C_GREEN=$'\e[32;01m'
+C_BLUE=$'\e[0;34m'
+C_NORMAL=$'\e[0m'
 
-cp ../COPYING ../README .
-git add COPYING README
-GIT_COMMITTER_DATE="Sat Jan 22 20:31:42 2005 +0200" \
-git commit --no-gpg-sign --date "Sat Jan 22 20:31:42 2005 +0200" \
-            -m 'Initial version' COPYING README
+ERRSTR="${C_RED}Error${C_NORMAL}"
 
-git submodule add -b SLACK-10_2 \
-    https://github.com/gdsotirov/net-snmp.SlackBuild.git net-snmp
-GIT_COMMITTER_DATE="Sat Jan 22 20:48:22 2005 +0200" \
-git commit --no-gpg-sign --date "Sat Jan 22 20:48:22 2005 +0200" \
-            -m 'Add net-snmp' .gitmodules net-snmp
+# Print status functions
+echo_done() {
+  echo "${C_GREEN}done${C_NORMAL}."
+}
 
-git submodule add -b SLACK-10_2 \
-    https://github.com/gdsotirov/hddtemp.SlackBuild.git hddtemp
-GIT_COMMITTER_DATE="Thu Mar 03 17:25:16 2005 +0200" \
-git commit --no-gpg-sign --date "Thu Mar 03 17:25:16 2005 +0200" \
-            -m 'Add hddtemp' .gitmodules hddtemp
+echo_fail() {
+  echo "${C_RED}fail${C_NORMAL}!"
+}
 
-git submodule add -b SLACK-10_2 \
-    https://github.com/gdsotirov/mysql.SlackBuild.git mysql
-GIT_COMMITTER_DATE="Fri Mar 11 23:01:00 2005 +0200" \
-git commit --no-gpg-sign --date "Fri Mar 11 23:01:00 2005 +0200" \
-            -m 'Add mysql' .gitmodules mysql
+echo_status() {
+  if [ $? != 0 ]; then
+    echo_fail
+  else
+    echo_done
+  fi
+}
 
-git submodule add -b SLACK-10_2 \
-    https://github.com/gdsotirov/php.SlackBuild php
-GIT_COMMITTER_DATE="Sat Mar 12 15:06:01 2005 +0200" \
-git commit --no-gpg-sign --date "Sat Mar 12 15:06:01 2005 +0200" \
-            -m 'Add php' .gitmodules php
+function add_files {
+  for file in $2; do
+    cp ${CWD}/$file .
+  done
+  git add $2
+  GIT_COMMITTER_DATE="$1" \
+    git commit --no-gpg-sign --date "$1" -m "$3" $2
+}
 
-# TODO: Add more commits here.
+function add_submodule {
+  git submodule add -b $3 $4 $2
+  GIT_COMMITTER_DATE="$1" \
+    git commit --no-gpg-sign --date "$1" -m "Add $2" .gitmodules $2
+}
+
+if [ -e $REPO_DIR ]; then
+  echo "${ERRSTR}: Repository directory '$REPO_DIR' exists!"
+  exit 1
+fi
+
+echo -n "Create repo directory... "
+mkdir repo
+echo_status
+cd repo
+
+echo -n "Initialize empty repository... "
+git init >/dev/null
+echo_status
+
+while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo; do
+  # Skip header
+  if [ "${rev_date}" == "Date" ]; then
+    continue
+  fi
+
+  echo -n "Revision ${REVN} (from $rev_date): "
+
+  case $rev_type in
+    files)
+      echo -n "adding file(s) ${rev_name}... "
+      add_files "$rev_date" "$rev_name" "$rev_message" >/dev/null 2>&1
+      echo_status
+      ;;
+    submodule)
+      echo -n "adding submodule ${rev_name}... "
+      add_submodule "$rev_date" "$rev_name" "$rev_branch" "$rev_repo" >/dev/null 2>&1
+      echo_status
+      ;;
+    *)
+      echo "${ERRSTR}: Unknown revision type '${rev_type}'!"
+      exit 2
+  esac
+
+  REVN=$((REVN + 1))
+done < ${CWD}/revisions.csv
 
