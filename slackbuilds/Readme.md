@@ -210,5 +210,11 @@ shortened from PACKAGE LICENSE) or otherwise (e.g. BSDLIC, GPLLIC, etc.).
 | kernel-headers | 2.6.28.7 | 2009-02-27 00:24:23 | 122 | no | yes | no |
 | kernel-headers | 2.6.30.1 | 2009-07-16 21:34:51 | 122 | no | yes | no |
 
-It does not seem it worth it to version these and migrate to Git.
+**Solution**: It does not seem it worth it to version these and migrate to Git.
+
+6. For some build scripts Slackware version is tag while in other its branch,
+but for submodules to work properly it is better to have these tags converted
+into branches.
+
+**Solution**: Convert SLACK-MJ_MN tags into branches with a script.
 
