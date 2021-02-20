@@ -9,4 +9,4 @@ Date;Type;Name;Branch;Message;Repo
 2005-03-15 22:28:37 +0200;submodule;faac;SLACK-10_2;;https://github.com/gdsotirov/faac.SlackBuild.git
 2005-03-15 22:44:40 +0200;submodule;faad2;SLACK-10_2;;https://github.com/gdsotirov/faad2.SlackBuild.git
 2005-03-16 19:56:03 +0200;submodule;avifile;SLACK-10_2;;https://github.com/gdsotirov/avifile.SlackBuild.git
-2005-03-16 20:41:08 +0200;submodule;a52dec;SLACK-10_3;;https://github.com/gdsotirov/a52dec.SlackBuild.git
+2005-03-16 20:41:08 +0200;submodule;a52dec;SLACK-10_2;;https://github.com/gdsotirov/a52dec.SlackBuild.git
