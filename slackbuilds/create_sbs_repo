@@ -39,7 +39,11 @@ echo_status() {
 
 function add_files {
   for file in $2; do
-    cp ${CWD}/$file .
+    file_dir=$(dirname $file)
+    if [ -n "$file_dir" ]; then
+      mkdir -p "$file_dir"
+    fi
+    cp ${CWD}/$file $file
   done
   git add $2
   GIT_COMMITTER_DATE="$1" \
