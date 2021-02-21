@@ -65,7 +65,7 @@ function add_files {
     git commit --no-gpg-sign --date "$1" -m "$4" $new_files
   ((res += $?))
 
-  if [ "$3" != "main" ]; then
+  if [ "$3" != "main" -a "$3" != "current" ]; then
     git branch $3
     ((res += $?))
   fi
@@ -116,9 +116,24 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
     continue
   fi
 
-  echo -n "Revision ${REVN} (from $rev_date): "
+  if [ -n "${rev_date}" ]; then
+    echo -n "Revision ${REVN} (from $rev_date): "
+    REVN=$((REVN + 1))
+  else
+    echo -n "Action: "
+  fi
 
   case $rev_type in
+    branch)
+      echo -n "creating branch ${rev_branch}... "
+      git branch "$rev_branch" >/dev/null 2>&1
+      echo_status
+      ;;
+    branch_sw)
+      echo -n "creating and switching to branch ${rev_branch}... "
+      git switch -c "$rev_branch" >/dev/null 2>&1
+      echo_status
+      ;;
     files)
       echo -n "adding/updating file(s) ${rev_name}... "
       add_files "$rev_date" "$rev_name" "$rev_branch" "$rev_message" >/dev/null 2>&1
@@ -130,15 +145,18 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
       echo_status
       ;;
     submodule)
-      echo -n "adding submodule ${rev_name}... "
+      if [ "$rev_branch" != "main" ]; then
+        echo -n "adding submodule ${rev_name} on branch ${rev_branch}... "
+      else
+        echo -n "adding submodule ${rev_name}... "
+      fi
       add_submodule "$rev_date" "$rev_name" "$rev_branch" "$rev_repo" >/dev/null 2>&1
       echo_status
       ;;
     *)
       echo "${ERRSTR}: Unknown revision type '${rev_type}'!"
       exit 2
+      ;;
   esac
-
-  REVN=$((REVN + 1))
 done < ${CWD}/revisions.csv
 
