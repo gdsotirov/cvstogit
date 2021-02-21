@@ -49,7 +49,7 @@ function add_files {
     fi
 
     # Remove trailing file version (e.g. .1, .2, .3, etc.)
-    file_new=$(echo $file | sed 's/\.[0-9]\+$//')
+    file_new=$(echo $file | sed 's/\-[0-9]\+$//')
     new_files="$new_files $file_new"
     cp ${CWD}/$file $file_new
     ((res += $?))
