@@ -42,7 +42,7 @@ function add_files {
 
   for file in $2; do
     file_dir=$(dirname $file)
-    if [ -n "$file_dir" ]; then
+    if [ "$file_dir" != "." ]; then
       mkdir -p "$file_dir"
     fi
 
