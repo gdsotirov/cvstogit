@@ -1,43 +1,45 @@
 Date;Type;Name;Branch;Message;Repo
-2005-01-22 20:31:42 +0200;files;COPYING README;;Initial version;
-2005-01-22 20:48:22 +0200;submodule;net-snmp;SLACK-10_2;;https://github.com/gdsotirov/net-snmp.SlackBuild.git
-2005-03-03 17:25:16 +0200;submodule;hddtemp;SLACK-10_2;;https://github.com/gdsotirov/hddtemp.SlackBuild.git
-2005-03-11 23:01:00 +0200;submodule;mysql;SLACK-10_2;;https://github.com/gdsotirov/mysql.SlackBuild.git
-2005-03-12 15:06:01 +0200;submodule;php;SLACK-10_2;;https://github.com/gdsotirov/php.SlackBuild.git
-2005-03-14 20:58:42 +0200;submodule;ffmpeg;SLACK-10_2;;https://github.com/gdsotirov/ffmpeg.SlackBuild.git
-2005-03-15 21:51:31 +0200;submodule;divx4linux;SLACK-10_2;;https://github.com/gdsotirov/divx4linux.SlackBuild.git
-2005-03-15 22:28:37 +0200;submodule;faac;SLACK-10_2;;https://github.com/gdsotirov/faac.SlackBuild.git
-2005-03-15 22:44:40 +0200;submodule;faad2;SLACK-10_2;;https://github.com/gdsotirov/faad2.SlackBuild.git
-2005-03-16 19:56:03 +0200;submodule;avifile;SLACK-10_2;;https://github.com/gdsotirov/avifile.SlackBuild.git
-2005-03-16 20:41:08 +0200;submodule;a52dec;SLACK-10_2;;https://github.com/gdsotirov/a52dec.SlackBuild.git
-2005-03-16 21:17:00 +0200;submodule;transcode;SLACK-10_2;;https://github.com/gdsotirov/transcode.SlackBuild.git
-2005-03-28 21:43:53 +0300;submodule;mailsend;SLACK-10_2;;https://github.com/gdsotirov/mailsend.SlackBuild.git
-2005-05-14 13:17:08 +0300;submodule;ddd;SLACK-10_2;;https://github.com/gdsotirov/ddd.SlackBuild.git
-2005-11-03 21:10:10 +0300;submodule;meld;SLACK-10_2;;https://github.com/gdsotirov/meld.SlackBuild.git
-2006-01-25 21:35:17 +0200;submodule;motion;SLACK-10_2;;https://github.com/gdsotirov/motion.SlackBuild.git
-2006-01-27 21:24:00 +0200;submodule;cvsgraph;SLACK-10_2;;https://github.com/gdsotirov/cvsgraph.SlackBuild.git
-2006-02-10 21:37:45 +0200;submodule;mysql-connector-odbc;SLACK-10_2;;https://github.com/gdsotirov/mysql-connector-odbc.SlackBuild.git
+2005-01-22 20:31:42 +0200;files;COPYING README;main;Initial version;
+2005-01-22 20:48:22 +0200;submodule;net-snmp;main;;https://github.com/gdsotirov/net-snmp.SlackBuild.git
+2005-03-03 17:25:16 +0200;submodule;hddtemp;main;;https://github.com/gdsotirov/hddtemp.SlackBuild.git
+2005-03-11 23:01:00 +0200;submodule;mysql;main;;https://github.com/gdsotirov/mysql.SlackBuild.git
+2005-03-12 15:06:01 +0200;submodule;php;main;;https://github.com/gdsotirov/php.SlackBuild.git
+2005-03-14 20:58:42 +0200;submodule;ffmpeg;main;;https://github.com/gdsotirov/ffmpeg.SlackBuild.git
+2005-03-15 21:51:31 +0200;submodule;divx4linux;main;;https://github.com/gdsotirov/divx4linux.SlackBuild.git
+2005-03-15 22:28:37 +0200;submodule;faac;main;;https://github.com/gdsotirov/faac.SlackBuild.git
+2005-03-15 22:44:40 +0200;submodule;faad2;main;;https://github.com/gdsotirov/faad2.SlackBuild.git
+2005-03-16 19:56:03 +0200;submodule;avifile;main;;https://github.com/gdsotirov/avifile.SlackBuild.git
+2005-03-16 20:41:08 +0200;submodule;a52dec;main;;https://github.com/gdsotirov/a52dec.SlackBuild.git
+2005-03-16 21:17:00 +0200;submodule;transcode;main;;https://github.com/gdsotirov/transcode.SlackBuild.git
+2005-03-28 21:43:53 +0300;submodule;mailsend;main;;https://github.com/gdsotirov/mailsend.SlackBuild.git
+2005-05-14 13:17:08 +0300;submodule;ddd;main;;https://github.com/gdsotirov/ddd.SlackBuild.git
+2005-11-03 21:10:10 +0300;submodule;meld;main;;https://github.com/gdsotirov/meld.SlackBuild.git
+2006-01-25 21:35:17 +0200;submodule;motion;main;;https://github.com/gdsotirov/motion.SlackBuild.git
+2006-01-27 21:24:00 +0200;submodule;cvsgraph;main;;https://github.com/gdsotirov/cvsgraph.SlackBuild.git
+2006-02-10 21:37:45 +0200;submodule;mysql-connector-odbc;main;;https://github.com/gdsotirov/mysql-connector-odbc.SlackBuild.git
 2006-02-18 16:21:47 +0200;files;etc/slack-package.conf;main;Add config from LinuxPackages.net with my changes;
-2006-03-03 23:38:11 +0200;submodule;k3b-i18n;SLACK-10_2;;https://github.com/gdsotirov/k3b-i18n.SlackBuild.git
-2006-03-04 11:12:00 +0200;submodule;chmlib;SLACK-10_2;;https://github.com/gdsotirov/chmlib.SlackBuild.git
-2006-03-05 17:35:04 +0200;submodule;xmlrpc++;SLACK-10_2;;https://github.com/gdsotirov/xmlrpcpp.SlackBuild.git
-2006-03-10 22:16:00 +0200;submodule;xchm;SLACK-10_2;;https://github.com/gdsotirov/xchm.SlackBuild.git
-2006-03-11 23:04:10 +0200;submodule;openoffice.org;SLACK-10_2;;https://github.com/gdsotirov/openoffice.SlackBuild.git
-2006-03-24 22:46:33 +0200;submodule;base64;SLACK-10_2;;https://github.com/gdsotirov/base64.SlackBuild.git
-2006-03-25 19:28:21 +0200;submodule;foo2zjs;SLACK-10_2;;https://github.com/gdsotirov/foo2zjs.SlackBuild.git
-2006-05-28 00:38:53 +0300;submodule;mozilla-firefox;SLACK-10_2;;https://github.com/gdsotirov/firefox.SlackBuild.git
-2006-05-28 00:52:42 +0300;submodule;mozilla-thunderbird;SLACK-10_2;;https://github.com/gdsotirov/thunderbird.SlackBuild.git
-2006-07-20 21:49:12 +0300;submodule;qemu;SLACK-10_2;;https://github.com/gdsotirov/qemu.SlackBuild.git
-2006-07-31 18:22:41 +0300;submodule;libgksu;SLACK-10_2;;https://github.com/gdsotirov/libgksu.SlackBuild.git
-2006-07-31 18:35:36 +0300;submodule;libgksuui;SLACK-10_2;;https://github.com/gdsotirov/libgksuui.SlackBuild.git
-2006-08-01 20:11:00 +0300;submodule;nut;SLACK-10_2;;https://github.com/gdsotirov/nut.SlackBuild.git
-2006-08-03 14:23:48 +0300;submodule;mgeups-psp;SLACK-10_2;;https://github.com/gdsotirov/mgeops-psp.SlackBuild.git
-2006-09-06 18:29:07 +0300;submodule;mysql-gui-tools;SLACK-10_2;;https://github.com/gdsotirov/mysql-gui-tools.SlackBuild.git
-2006-09-10 20:19:24 +0300;submodule;mrtg;SLACK-10_2;;https://github.com/gdsotirov/mrtg.SlackBuild.git
-2006-09-13 22:59:31 +0300;submodule;lua;SLACK-10_2;;https://github.com/gdsotirov/lua.SlackBuild.git
-2006-09-27 21:40:48 +0300;submodule;gocr;SLACK-10_2;;https://github.com/gdsotirov/gocr.SlackBuild.git
-2006-09-28 23:10:51 +0300;submodule;ocrad;SLACK-10_2;;https://github.com/gdsotirov/ocrad.SlackBuild.git
-2006-10-07 18:48:52 +0300;files;etc/slack-package.conf.1;SLACK-11_0;Update config for Slackware 11.0;
+2006-03-03 23:38:11 +0200;submodule;k3b-i18n;main;;https://github.com/gdsotirov/k3b-i18n.SlackBuild.git
+2006-03-04 11:12:00 +0200;submodule;chmlib;main;;https://github.com/gdsotirov/chmlib.SlackBuild.git
+2006-03-05 17:35:04 +0200;submodule;xmlrpc++;main;;https://github.com/gdsotirov/xmlrpcpp.SlackBuild.git
+2006-03-10 22:16:00 +0200;submodule;xchm;main;;https://github.com/gdsotirov/xchm.SlackBuild.git
+2006-03-11 23:04:10 +0200;submodule;openoffice.org;main;;https://github.com/gdsotirov/openoffice.SlackBuild.git
+2006-03-24 22:46:33 +0200;submodule;base64;main;;https://github.com/gdsotirov/base64.SlackBuild.git
+2006-03-25 19:28:21 +0200;submodule;foo2zjs;main;;https://github.com/gdsotirov/foo2zjs.SlackBuild.git
+2006-05-28 00:38:53 +0300;submodule;mozilla-firefox;main;;https://github.com/gdsotirov/firefox.SlackBuild.git
+2006-05-28 00:52:42 +0300;submodule;mozilla-thunderbird;main;;https://github.com/gdsotirov/thunderbird.SlackBuild.git
+2006-07-20 21:49:12 +0300;submodule;qemu;main;;https://github.com/gdsotirov/qemu.SlackBuild.git
+2006-07-31 18:22:41 +0300;submodule;libgksu;main;;https://github.com/gdsotirov/libgksu.SlackBuild.git
+2006-07-31 18:35:36 +0300;submodule;libgksuui;main;;https://github.com/gdsotirov/libgksuui.SlackBuild.git
+2006-08-01 20:11:00 +0300;submodule;nut;main;;https://github.com/gdsotirov/nut.SlackBuild.git
+2006-08-03 14:23:48 +0300;submodule;mgeups-psp;main;;https://github.com/gdsotirov/mgeops-psp.SlackBuild.git
+2006-09-06 18:29:07 +0300;submodule;mysql-gui-tools;main;;https://github.com/gdsotirov/mysql-gui-tools.SlackBuild.git
+2006-09-10 20:19:24 +0300;submodule;mrtg;main;;https://github.com/gdsotirov/mrtg.SlackBuild.git
+2006-09-13 22:59:31 +0300;submodule;lua;main;;https://github.com/gdsotirov/lua.SlackBuild.git
+2006-09-27 21:40:48 +0300;submodule;gocr;main;;https://github.com/gdsotirov/gocr.SlackBuild.git
+2006-09-28 23:10:51 +0300;submodule;ocrad;main;;https://github.com/gdsotirov/ocrad.SlackBuild.git
+;branch;;SLACK-10_2;;
+;branch_sw;;SLACK-11_0;;
+2006-10-07 18:48:52 +0300;files;etc/slack-package.conf.1;current;Update config for Slackware 11.0;
 2006-10-12 02:00:54 +0300;sm_branch;mysql-gui-tools;.;;https://github.com/gdsotirov/mysql-gui-tools.SlackBuild.git
 2006-10-12 22:24:54 +0300;sm_branch;mysql;.;;https://github.com/gdsotirov/mysql.SlackBuild.git
 2006-10-16 22:07:13 +0300;sm_branch;openoffice.org;.;;https://github.com/gdsotirov/openoffice.SlackBuild.git
