@@ -1,1 +1,2 @@
 cvs2git.options linguist-vendored=true
+*.conf* linguist-language=Shell
