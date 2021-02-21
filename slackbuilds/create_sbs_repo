@@ -39,36 +39,49 @@ echo_status() {
 
 function add_files {
   new_files=""
+  res=0
 
   for file in $2; do
     file_dir=$(dirname $file)
     if [ "$file_dir" != "." ]; then
       mkdir -p "$file_dir"
+      ((res += $?))
     fi
 
     # Remove trailing file version (e.g. .1, .2, .3, etc.)
     file_new=$(echo $file | sed 's/\.[0-9]\+$//')
     new_files="$new_files $file_new"
     cp ${CWD}/$file $file_new
+    ((res += $?))
 
     # Add to repository if initial version
     if [ "$file" == "$file_new" ]; then
       git add $file_new
+      ((res += $?))
     fi
   done
 
   GIT_COMMITTER_DATE="$1" \
     git commit --no-gpg-sign --date "$1" -m "$4" $new_files
+  ((res += $?))
 
   if [ "$3" != "main" ]; then
     git branch $3
+    ((res += $?))
   fi
+
+  return $res
 }
 
 function add_submodule {
+  res=0
   git submodule add -b $3 $4 $2
+  ((res += $?))
   GIT_COMMITTER_DATE="$1" \
     git commit --no-gpg-sign --date "$1" -m "Add $2" .gitmodules $2
+  ((res += $?))
+
+  return $res
 }
 
 if [ -e $REPO_DIR ]; then
@@ -96,7 +109,7 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
   case $rev_type in
     files)
       echo -n "adding/updating file(s) ${rev_name}... "
-      add_files "$rev_date" "$rev_name" "$rev_branch" "$rev_message" #>/dev/null 2>&1
+      add_files "$rev_date" "$rev_name" "$rev_branch" "$rev_message" >/dev/null 2>&1
       echo_status
       ;;
     submodule)
