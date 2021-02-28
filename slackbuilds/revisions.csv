@@ -39,9 +39,31 @@ Date;Type;Name;Branch;Message;Repo
 2006-09-28 23:10:51 +0300;submodule;ocrad;main;;https://github.com/gdsotirov/ocrad.SlackBuild.git
 ;branch;;SLACK-10_2;;
 ;branch_sw;;SLACK-11_0;;
-2006-10-07 18:48:52 +0300;files;etc/slack-package.conf.1;current;Update config for Slackware 11.0;
+2006-10-07 18:48:52 +0300;files;etc/slack-package.conf-1;current;Update config for Slackware 11.0;
 2006-10-12 02:00:54 +0300;sm_branch;mysql-gui-tools;.;;https://github.com/gdsotirov/mysql-gui-tools.SlackBuild.git
 2006-10-12 22:24:54 +0300;sm_branch;mysql;.;;https://github.com/gdsotirov/mysql.SlackBuild.git
 2006-10-16 22:07:13 +0300;sm_branch;openoffice.org;.;;https://github.com/gdsotirov/openoffice.SlackBuild.git
 2006-10-21 22:04:16 +0300;sm_branch;hddtemp;.;;https://github.com/gdsotirov/hddtemp.SlackBuild.git
 2006-10-22 14:09:19 +0300;submodule;valgrind;SLACK-11_0;;https://github.com/gdsotirov/valgrind.SlackBuild.git
+2006-10-31 23:18:27 +0200;submodule;newt;SLACK-11_0;;https://github.com/gdsotirov/newt.SlackBuild.git
+2006-11-02 22:21:49 +0200;submodule;lzo;SLACK-11_0;;https://github.com/gdsotirov/lzo.SlackBuild.git
+2006-11-03 21:52:47 +0200;submodule;partimage;SLACK-11_0;;https://github.com/gdsotirov/partimage.SlackBuild.git
+2006-11-05 16:42:26 +0200;submodule;skype;SLACK-11_0;;https://github.com/gdsotirov/skype.SlackBuild.git
+2006-11-06 08:29:40 +0200;submodule;kdesvn;SLACK-11_0;;https://github.com/gdsotirov/kdesvn.SlackBuild.git
+2006-12-03 13:40:44 +0200;submodule;cbgoffice;SLACK-11_0;;https://github.com/gdsotirov/cbgoffice.SlackBuild.git
+2006-12-03 13:48:47 +0200;submodule;kbgoffice;SLACK-11_0;;https://github.com/gdsotirov/kbgoffice.SlackBuild.git
+2006-12-03 20:02:54 +0200;submodule;yasm;SLACK-11_0;;https://github.com/gdsotirov/yasm.SlackBuild.git
+2006-12-07 22:33:14 +0200;submodule;gbgoffice;SLACK-11_0;;https://github.com/gdsotirov/gbgoffice.SlackBuild.git
+2006-12-12 00:03:24 +0200;submodule;ispell-bg;SLACK-11_0;;https://github.com/gdsotirov/ispell-bg.SlackBuild.git
+2006-12-12 01:54:48 +0200;submodule;aspell-bg;SLACK-11_0;;https://github.com/gdsotirov/aspell-bg.SlackBuild.git
+2007-01-03 00:01:00 +0200;submodule;opera;SLACK-11_0;;https://github.com/gdsotirov/opera.SlackBuild.git
+2007-01-07 16:48:54 +0200;submodule;smw;SLACK-11_0;;https://github.com/gdsotirov/smw.SlackBuild.git
+2007-01-23 01:09:37 +0200;submodule;sim;SLACK-11_0;;https://github.com/gdsotirov/sim.SlackBuild.git
+2007-02-07 14:53:49 +0200;submodule;ktorrent;SLACK-11_0;;https://github.com/gdsotirov/ktorrent.SlackBuild.git
+2007-02-12 09:17:19 +0200;submodule;dosbox;SLACK-11_0;;https://github.com/gdsotirov/dosbox.SlackBuild.git
+2007-03-01 22:51:31 +0200;submodule;rrdtool;SLACK-11_0;;https://github.com/gdsotirov/rrdtool.SlackBuild.git
+2007-03-18 06:12:04 +0200;submodule;k3b;SLACK-11_0;;https://github.com/gdsotirov/k3b.SlackBuild.git
+2007-03-29 14:22:42 +0300;submodule;highlight;SLACK-11_0;;https://github.com/gdsotirov/highlight.SlackBuild.git
+2007-07-09 21:15:10 +0300;submodule;pygobject;SLACK-11_0;;https://github.com/gdsotirov/pygobject.SlackBuild.git
+;branch_sw;;SLACK-12_0;;
+2007-07-09 22:04:55 +0300;submodule;libdaemon;SLACK-12_0;;https://github.com/gdsotirov/libdaemon.SlackBuild.git
