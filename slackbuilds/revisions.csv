@@ -39,7 +39,7 @@ Date;Type;Name;Branch;Message;Repo
 2006-09-28 23:10:51 +0300;submodule;ocrad;main;;https://github.com/gdsotirov/ocrad.SlackBuild.git
 ;branch;;SLACK-10_2;;
 ;branch_sw;;SLACK-11_0;;
-2006-10-07 18:48:52 +0300;files;etc/slack-package.conf-1;current;Update config for Slackware 11.0;
+2006-10-07 18:48:52 +0300;files;etc/slack-package.conf-1;SLACK-11_0;Update config for Slackware 11.0;
 2006-10-12 02:00:54 +0300;sm_branch;mysql-gui-tools;.;;https://github.com/gdsotirov/mysql-gui-tools.SlackBuild.git
 2006-10-12 22:24:54 +0300;sm_branch;mysql;.;;https://github.com/gdsotirov/mysql.SlackBuild.git
 2006-10-16 22:07:13 +0300;sm_branch;openoffice.org;.;;https://github.com/gdsotirov/openoffice.SlackBuild.git
@@ -66,4 +66,15 @@ Date;Type;Name;Branch;Message;Repo
 2007-03-29 14:22:42 +0300;submodule;highlight;SLACK-11_0;;https://github.com/gdsotirov/highlight.SlackBuild.git
 2007-07-09 21:15:10 +0300;submodule;pygobject;SLACK-11_0;;https://github.com/gdsotirov/pygobject.SlackBuild.git
 ;branch_sw;;SLACK-12_0;;
+2007-07-09 21:16:38 +0300;files;etc/slack-package.conf-2;SLACK-12_0;Updates for Slackware 12;
 2007-07-09 22:04:55 +0300;submodule;libdaemon;SLACK-12_0;;https://github.com/gdsotirov/libdaemon.SlackBuild.git
+2007-07-09 23:46:33 +0300;submodule;pycairo;SLACK-12_0;;https://github.com/gdsotirov/pycairo.SlackBuild.git
+2007-07-10 00:21:41 +0300;submodule;pygtk;SLACK-12_0;;https://github.com/gdsotirov/pygtk.SlackBuild.git
+2007-07-11 23:33:49 +0300;submodule;swig;SLACK-12_0;;https://github.com/gdsotirov/swig.SlackBuild.git
+2007-07-12 12:55:01 +0300;submodule;xmltoman;SLACK-12_0;;https://github.com/gdsotirov/xmltoman.SlackBuild.git
+2007-07-12 15:14:29 +0300;submodule;graphviz;SLACK-12_0;;https://github.com/gdsotirov/graphviz.SlackBuild.git
+2007-07-12 19:10:48 +0300;submodule;dbus;SLACK-11_0;;https://github.com/gdsotirov/dbus.SlackBuild.git
+2007-07-12 19:50:37 +0300;submodule;xmlto;SLACK-12_0;;https://github.com/gdsotirov/xmlto.SlackBuild.git
+2007-07-12 20:50:21 +0300;submodule;dbus-glib;SLACK-12_0;;https://github.com/gdsotirov/dbus-glib.SlackBuild.git
+2007-07-12 21:09:11 +0300;submodule;dbus-python;SLACK-12_0;;https://github.com/gdsotirov/dbus-python.SlackBuild.git
+2007-07-12 23:53:44 +0300;submodule;avahi;SLACK-12_0;;https://github.com/gdsotirov/avahi.SlackBuild.git
