@@ -65,27 +65,27 @@ repository. The suggested order that may not be followed strictly is:
 
 | Package | Version | Timestamp | Slackware | SlackBuild | Description |
 | --- | --- | --- | --- | --- | --- |
-| net-snmp | 5.2 | current | 2005-01-22 20:27:00 | no | yes |
-| gd | 2.0.33 | current | 2005-01-23 14:48:00 | no | yes |
-| hddtemp | 0.3b12 | 102 | 2005-03-03 01:35:00 | no | yes |
-| ksensors | 0.7.3 | current | 2005-03-05 23:45:00 | no | yes |
-| mysql | 4.1.10 | 102 | 2005-03-11 23:00:00 | no | yes |
-| php | 4.3.10 | current | 2005-03-12 15:05:00 | no | yes |
-| konverter | 0.92b1 | current | 2005-03-13 13:00:00 | no | yes |
-| ffmpeg | 0.4.9pre1 | current | 2005-03-14 20:55:00 | no | yes |
-| divx4linux | 20030428 | current | 2005-03-15 22:00:00 | no | yes |
-| xvidcore | 1.1.0b1 | current | 2005-03-15 22:13:00 | no | yes |
-| faad2 | 2.0 | current | 2005-03-15 22:50:00 | no | yes |
-| faac | 1.24 | current | 2005-03-15 23:00:00 | no | yes |
-| avifile | 0.7.42 | current | 2005-03-16 20:00:00 | no | yes |
-| a52dec | 0.7.4 | current | 2005-03-16 20:40:00 | no | yes |
-| transcode | 0.6.14 | current | 2005-03-16 21:06:00 | no | yes |
-| mailsend | 1.05 | 102 | 2005-03-28 21:42:00 | no | yes |
-| neon | 0.24.7 | current | 2005-04-16 21:19:00 | no | yes |
-| ddd | 3.3.11 | current | 2005-05-14 13:17:00 | no | yes |
-| redland | 0.9.16 | current | 2005-08-24 22:10:00 | no | yes |
-| myodbc | 3.51.11 | current | 2005-10-02 17:28:00 | no | yes |
-| meld | 1.1.1 | current | 2005-11-03 21:09:00 | no | yes |
+| net-snmp | 5.2 | 100 | 2005-01-22 20:27:00 | no | yes |
+| gd | 2.0.33 | 100 | 2005-01-23 14:48:00 | no | yes |
+| hddtemp | 0.3b12 | 101 | 2005-03-03 01:35:00 | no | yes |
+| ksensors | 0.7.3 | 101 | 2005-03-05 23:45:00 | no | yes |
+| mysql | 4.1.10 | 101 | 2005-03-11 23:00:00 | no | yes |
+| php | 4.3.10 | 101 | 2005-03-12 15:05:00 | no | yes |
+| konverter | 0.92b1 | 101 | 2005-03-13 13:00:00 | no | yes |
+| ffmpeg | 0.4.9pre1 | 101 | 2005-03-14 20:55:00 | no | yes |
+| divx4linux | 20030428 | 101 | 2005-03-15 22:00:00 | no | yes |
+| xvidcore | 1.1.0b1 | 101 | 2005-03-15 22:13:00 | no | yes |
+| faad2 | 2.0 | 101 | 2005-03-15 22:50:00 | no | yes |
+| faac | 1.24 | 101 | 2005-03-15 23:00:00 | no | yes |
+| avifile | 0.7.42 | 101 | 2005-03-16 20:00:00 | no | yes |
+| a52dec | 0.7.4 | 101 | 2005-03-16 20:40:00 | no | yes |
+| transcode | 0.6.14 | 101 | 2005-03-16 21:06:00 | no | yes |
+| mailsend | 1.05 | 101 | 2005-03-28 21:42:00 | no | yes |
+| neon | 0.24.7 | 101 | 2005-04-16 21:19:00 | no | yes |
+| ddd | 3.3.11 | 101 | 2005-05-14 13:17:00 | no | yes |
+| redland | 0.9.16 | 101 | 2005-08-24 22:10:00 | no | yes |
+| myodbc | 3.51.11 | 102 | 2005-10-02 17:28:00 | no | yes |
+| meld | 1.1.1 | 102 | 2005-11-03 21:09:00 | no | yes |
 | motion | 3.2.4 | 102 | 2006-01-22 21:35:00 | no | yes |
 | xawtv | 3.95 | 102 | 2006-01-25 15:51:00 | no | yes |
 | cvsgraph | 1.6.0 | 102 | 2006-01-27 22:23:00 | no | yes |
@@ -183,13 +183,13 @@ shortened from PACKAGE LICENSE) or otherwise (e.g. BSDLIC, GPLLIC, etc.).
 
 | Package | Version | Timestamp | Slackware | SlackBuild | Description | Requirements |
 | --- | --- | --- | --- | --- | --- | --- |
-| gd | 2.0.33 | 2005-01-23 14:48:00 | 99999 | no | yes | yes |
-| ksensors | 0.7.3 | 2005-03-05 23:45:00 | 99999 | no | yes | no |
-| konverter | 0.92b1 | 2005-03-13 13:00:00 | 99999 | no | yes | no |
-| neon | 0.24.7 | 2005-04-16 21:19:00 | 99999 | no | yes | yes |
-| redland | 0.9.16 | 2005-08-24 22:10:00 | 99999 | no | yes | no |
-| myodbc | 3.51.11 | 2005-10-02 17:28:00 | 99999 | no | yes | no |
-| myodbc | 3.51.12 | 2005-10-29 00:44:00 | 99999 | no | yes | no |
+| gd | 2.0.33 | 2005-01-23 14:48:00 | 100 | no | yes | yes |
+| ksensors | 0.7.3 | 2005-03-05 23:45:00 | 101 | no | yes | no |
+| konverter | 0.92b1 | 2005-03-13 13:00:00 | 101 | no | yes | no |
+| neon | 0.24.7 | 2005-04-16 21:19:00 | 101 | no | yes | yes |
+| redland | 0.9.16 | 2005-08-24 22:10:00 | 101 | no | yes | no |
+| myodbc | 3.51.11 | 2005-10-02 17:28:00 | 102 | no | yes | no |
+| myodbc | 3.51.12 | 2005-10-29 00:44:00 | 102 | no | yes | no |
 | xawtv | 3.95 | 2006-01-25 15:51:00 | 102 | no | yes | no |
 | xawtv | 3.95 | 2006-01-29 11:24:00 | 102 | no | yes | no |
 | mysql-administrator | 1.1.6 | 2006-02-04 12:45:00 | 102 | no | yes | no |
