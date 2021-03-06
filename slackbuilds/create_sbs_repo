@@ -111,7 +111,7 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
     continue
   fi
 
-  if [ -n "${rev_date}" ]; then
+  if [ "${rev_type}" != "branch" -a "${rev_type}" != "branch_sw" ]; then
     echo -n "Revision ${REVN} (from $rev_date): "
     REVN=$((REVN + 1))
   else
