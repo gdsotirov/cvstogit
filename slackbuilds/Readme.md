@@ -63,7 +63,7 @@ a Slackware build script sources then the repository first should be migrated
 to Git and moved to GitHub, so then the work should continue in the new
 repository. The suggested order that may not be followed strictly is:
 
-| Package | Version | Timestamp | Slackware | SlackBuild | Description |
+| Package | Version | Slackware | Timestamp | SlackBuild | Description |
 | --- | --- | --- | --- | --- | --- |
 | net-snmp | 5.2 | 100 | 2005-01-22 20:27:00 | no | yes |
 | gd | 2.0.33 | 100 | 2005-01-23 14:48:00 | no | yes |
