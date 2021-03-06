@@ -62,7 +62,7 @@ function add_files {
   done
 
   GIT_COMMITTER_DATE="$1" \
-    git commit --no-gpg-sign --date "$1" -m "$4" $new_files
+    git commit --no-gpg-sign --date "$1" -m "$3" $new_files
   ((res += $?))
 
   return $res
@@ -131,7 +131,7 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
       ;;
     files)
       echo -n "adding/updating file(s) ${rev_name}... "
-      add_files "$rev_date" "$rev_name" "$rev_branch" "$rev_message" >/dev/null 2>&1
+      add_files "$rev_date" "$rev_name" "$rev_message" >/dev/null 2>&1
       echo_status
       ;;
     sm_branch)
