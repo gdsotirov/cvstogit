@@ -240,3 +240,12 @@ Date;Type;Name;Branch;Message;Repo
 2011-03-21 23:49:45 +0200;submodule;libreoffice-langpack;SLACK-13_1;;https://github.com/gdsotirov/libreoffice-langpack.SlackBuild.git
 2011-03-22 00:54:22 +0200;submodule;libreoffice-helppack;SLACK-13_1;;https://github.com/gdsotirov/libreoffice-helppack.SlackBuild.git
 2011-04-25 16:37:00 +0300;branch_sw;;SLACK-13_37;;
+2011-12-24 18:28:29 +0200;submodule;fribidi;SLACK-13_37;;https://github.com/gdsotirov/fribidi.SlackBuild.git
+2012-01-22 19:18:12 +0200;submodule;ctemplate;SLACK-13_1;;https://github.com/gdsotirov/ctemplate.SlackBuild.git
+2012-06-30 18:51:21 +0300;submodule;pcsc-omnikey;SLACK-13_37;;https://github.com/gdsotirov/pcsc-omnikey.SlackBuild.git
+2012-09-15 10:58:21 +0300;submodule;opus;SLACK-13_37;;https://github.com/gdsotirov/opus.SlackBuild.git
+2012-09-17 12:45:23 +0300;submodule;libconfig;SLACK-13_37;;https://github.com/gdsotirov/libconfig.SlackBuild.git
+2012-09-17 14:18:30 +0300;submodule;libdbus-c++;SLACK-13_37;;https://github.com/gdsotirov/libdbus-cpp.SlackBuild.git
+2012-09-17 16:45:42 +0300;submodule;libxml++;SLACK-13_37;;https://github.com/gdsotirov/libxmlpp.SlackBuild.git
+2012-09-22 10:16:27 +0300;submodule;ncdu;SLACK-13_37;;https://github.com/gdsotirov/ncdu.SlackBuild.git
+2012-09-26 04:10:42 +0300;branch_sw;;SLACK-14_0;;
