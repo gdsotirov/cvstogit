@@ -72,6 +72,7 @@ Date;Type;Name;Branch;Message;Repo
 2007-07-02 06:30:42 +0300;branch_sw;;SLACK-12_0;;
 2007-07-09 21:15:10 +0300;submodule;pygobject;SLACK-11_0;;https://github.com/gdsotirov/pygobject.SlackBuild.git
 2007-07-09 21:16:38 +0300;files;etc/slack-package.conf-2;SLACK-12_0;Updates for Slackware 12;
+2007-07-09 22:01:27 +0300;move;etc/slack-package.conf:slack-package.conf;SLACK-12_0;Move config to root directory;
 2007-07-09 22:04:55 +0300;submodule;libdaemon;SLACK-12_0;;https://github.com/gdsotirov/libdaemon.SlackBuild.git
 2007-07-09 23:46:33 +0300;submodule;pycairo;SLACK-12_0;;https://github.com/gdsotirov/pycairo.SlackBuild.git
 2007-07-10 00:21:41 +0300;submodule;pygtk;SLACK-12_0;;https://github.com/gdsotirov/pygtk.SlackBuild.git
@@ -171,10 +172,12 @@ Date;Type;Name;Branch;Message;Repo
 2008-11-30 15:58:58 +0200;submodule;scrollkeeper;SLACK-12_1;;https://github.com/gdsotirov/scrollkeeper.SlackBuild.git
 2008-11-30 22:30:24 +0200;submodule;libshout;SLACK-12_1;;https://github.com/gdsotirov/libshout.SlackBuild.git
 2008-12-09 08:00:23 +0200;branch_sw;;SLACK-12_2;;
+2009-01-17 08:43:23 +0200;files;slack-package.conf-3;SLACK-12_2;Remove comented permission lines;
 2009-02-22 19:59:59 +0200;submodule;powerman;SLACK-12_2;;https://github.com/gdsotirov/powerman.SlackBuild.git
 2009-03-25 23:19:53 +0200;submodule;sunbird;SLACK-12_2;;https://github.com/gdsotirov/sunbird.SlackBuild.git
 2009-04-27 22:47:56 +0300;submodule;swish-e;SLACK-12_2;;https://github.com/gdsotirov/swish-e.SlackBuild.git
 2009-08-26 18:00:38 +0300;branch_sw;;SLACK-13_0;;
+2009-09-06 18:05:37 +0300;files;slack-package.conf-4;SLACK-13_0;Update for Slackware 13, man and info pages, source permissions;
 2009-09-06 18:07:55 +0300;submodule;swaret;SLACK-13_0;;https://github.com/gdsotirov/swaret.SlackBuild.git
 2009-10-17 19:08:36 +0300;submodule;libgdiplus;SLACK-13_0;;https://github.com/gdsotirov/libgdiplus.SlackBuild.git
 2009-10-17 19:31:34 +0300;submodule;mono;SLACK-13_0;;https://github.com/gdsotirov/mono.SlackBuild.git
@@ -235,11 +238,13 @@ Date;Type;Name;Branch;Message;Repo
 2010-12-26 17:07:41 +0200;submodule;armagetronad;SLACK-13_0;;https://github.com/gdsotirov/armagetronad.SlackBuild.git
 2011-02-11 11:14:53 +0200;submodule;bzr;SLACK-13_1;;https://github.com/gdsotirov/bzr.SlackBuild.git
 2011-02-13 10:46:54 +0200;submodule;docutils;SLACK-13_1;;https://github.com/gdsotirov/docutils.SlackBuild.git
+2011-02-24 22:12:48 +0200;files;slack-package.conf-5;SLACK-13_1;Optimise even more by default;
 2011-03-13 11:58:11 +0200;submodule;wdiff;SLACK-13_1;;https://github.com/gdsotirov/wdiff.SlackBuild.git
 2011-03-13 12:44:58 +0200;submodule;libreoffice;SLACK-13_1;;https://github.com/gdsotirov/libreoffice.SlackBuild.git
 2011-03-21 23:49:45 +0200;submodule;libreoffice-langpack;SLACK-13_1;;https://github.com/gdsotirov/libreoffice-langpack.SlackBuild.git
 2011-03-22 00:54:22 +0200;submodule;libreoffice-helppack;SLACK-13_1;;https://github.com/gdsotirov/libreoffice-helppack.SlackBuild.git
 2011-04-25 16:37:00 +0300;branch_sw;;SLACK-13_37;;
+2011-05-01 18:35:59 +0300;files;slack-package.conf-6;SLACK-13_37;Touch for Slackware 13.37;
 2011-12-24 18:28:29 +0200;submodule;fribidi;SLACK-13_37;;https://github.com/gdsotirov/fribidi.SlackBuild.git
 2012-01-22 19:18:12 +0200;submodule;ctemplate;SLACK-13_1;;https://github.com/gdsotirov/ctemplate.SlackBuild.git
 2012-06-30 18:51:21 +0300;submodule;pcsc-omnikey;SLACK-13_37;;https://github.com/gdsotirov/pcsc-omnikey.SlackBuild.git
