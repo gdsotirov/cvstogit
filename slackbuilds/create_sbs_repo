@@ -79,6 +79,18 @@ function add_submodule {
   return $res
 }
 
+function move {
+  res=0
+
+  git mv "$2" "$3"
+  ((res += $?))
+  GIT_COMMITTER_DATE="$1" \
+    git commit --no-gpg-sign --date "$1" --message "$4" "$2" "$3"
+  ((res += $?))
+
+  return $res
+}
+
 function sm_set_branch {
   res=0
   git submodule set-branch --branch $3 $2
@@ -132,6 +144,13 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
     files)
       echo -n "adding/updating file(s) ${rev_name}... "
       add_files "$rev_date" "$rev_name" "$rev_message" >/dev/null 2>&1
+      echo_status
+      ;;
+    move)
+      move_from=$(echo $rev_name | cut -d : -f 1)
+      move_to=$(echo $rev_name | cut -d : -f 2)
+      echo -n "moving ${move_from} to ${move_to}... "
+      move "$rev_date" "$move_from" "$move_to" "$rev_message" >/dev/null 2>&1
       echo_status
       ;;
     sm_branch)
