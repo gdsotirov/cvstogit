@@ -109,7 +109,7 @@ function move {
   git mv "$2" "$3"
   ((res += $?))
   GIT_COMMITTER_DATE="$1" \
-    git commit --no-gpg-sign --date "$1" --message "$4" "$2" "$3"
+    git commit --no-gpg-sign --date "$1" --message "$4" "$2" "$3" .gitmodules
   ((res += $?))
 
   return $res
