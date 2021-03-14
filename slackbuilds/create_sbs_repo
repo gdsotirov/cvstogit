@@ -177,12 +177,12 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
       ;;
     merge_ff)
       echo -n "merge (fast forward to) ${rev_branch}... "
-      git merge --ff-only --no-commit $2 >/dev/null 2>&1
+      git merge --ff-only --no-commit "$rev_branch" >/dev/null 2>&1
       echo_status
       ;;
     merge)
       echo -n "merge ${rev_branch}... "
-      merge "$rev_date" "$rev_name" "$rev_branch" "$rev_message"
+      merge "$rev_date" "$rev_name" "$rev_branch" "$rev_message"  >/dev/null 2>&1
       echo_status
       ;;
     move)
