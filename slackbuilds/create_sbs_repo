@@ -123,7 +123,11 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
     continue
   fi
 
-  if [ "${rev_type}" != "branch" -a "${rev_type}" != "branch_sw" ]; then
+  if [ "${rev_type}" != "branch"    ] && \
+     [ "${rev_type}" != "branch_sw" ] && \
+     [ "${rev_type}" != "merge_ff"  ] && \
+     [ "${rev_type}" != "switch"    ]
+  then
     echo -n "Revision ${REVN} (from $rev_date): "
     REVN=$((REVN + 1))
   else
@@ -146,6 +150,11 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
       add_files "$rev_date" "$rev_name" "$rev_message" >/dev/null 2>&1
       echo_status
       ;;
+    merge_ff)
+      echo -n "merge (fast forward to) ${rev_branch}... "
+      git merge --ff-only --no-commit $2 >/dev/null 2>&1
+      echo_status
+      ;;
     move)
       move_from=$(echo $rev_name | cut -d : -f 1)
       move_to=$(echo $rev_name | cut -d : -f 2)
@@ -165,6 +174,11 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
         echo -n "adding submodule ${rev_name}... "
       fi
       add_submodule "$rev_date" "$rev_name" "$rev_branch" "$rev_repo" >/dev/null 2>&1
+      echo_status
+      ;;
+    switch)
+      echo -n "switching to ${rev_branch} branch... "
+      git switch --recurse-submodules "${rev_branch}" >/dev/null 2>&1
       echo_status
       ;;
     *)
