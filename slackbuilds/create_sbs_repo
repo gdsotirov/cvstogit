@@ -79,6 +79,30 @@ function add_submodule {
   return $res
 }
 
+function merge {
+  res=0
+
+  git merge --no-commit $3 >/dev/null 2>&1
+  ((res += $?))
+
+  # Add file to resolve merge conflict
+  if [ $res -gt 0 -a -n "$2" ]; then
+    res=0
+    file_new=$(echo $2 | sed 's/\-[0-9]\+$//')
+    cp ${CWD}/$2 $file_new
+    ((res += $?))
+
+    git add $file_new
+    ((res += $?))
+  fi
+
+  GIT_COMMITTER_DATE="$1" \
+    git commit --no-gpg-sign --date "$1" --message "$4"
+  ((res += $?))
+
+  return $res
+}
+
 function move {
   res=0
 
@@ -93,6 +117,7 @@ function move {
 
 function sm_set_branch {
   res=0
+
   git submodule set-branch --branch $3 $2
   ((res += $?))
   GIT_COMMITTER_DATE="$1" \
@@ -153,6 +178,11 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
     merge_ff)
       echo -n "merge (fast forward to) ${rev_branch}... "
       git merge --ff-only --no-commit $2 >/dev/null 2>&1
+      echo_status
+      ;;
+    merge)
+      echo -n "merge ${rev_branch}... "
+      merge "$rev_date" "$rev_name" "$rev_branch" "$rev_message"
       echo_status
       ;;
     move)
