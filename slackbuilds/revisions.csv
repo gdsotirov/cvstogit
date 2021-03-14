@@ -286,6 +286,7 @@ Date;Type;Name;Branch;Message;Repo
 2015-04-29 21:13:20 +0300;submodule;python-ecdsa;SLACK-14_0;;https://github.com/gdsotirov/python-ecdsa.SlackBuild.git
 2015-05-01 10:40:26 +0300;submodule;tinyxml2;SLACK-14_1;;https://github.com/gdsotirov/tinyxml2.SlackBuild.git
 2015-05-01 17:50:19 +0300;submodule;sbc;SLACK-14_0;;https://github.com/gdsotirov/sbc.SlackBuild.git
+2015-05-23 19:56:05 +0300;files;check_deps;main;Add script to check dependencies;
 2015-05-31 19:57:56 +0300;submodule;speexdsp;SLACK-14_1;;https://github.com/gdsotirov/speexdsp.SlackBuild.git
 2015-09-22 15:07:00 +0300;submodule;openldap;SLACK-11_0;;https://github.com/gdsotirov/openldap.SlackBuild.git
 2016-05-03 20:27:52 +0300;submodule;freeradius-server;SLACK-13_0;;https://github.com/gdsotirov/freeradius-server.SlackBuild.git
@@ -306,6 +307,7 @@ Date;Type;Name;Branch;Message;Repo
 2016-09-16 14:46:16 +0300;submodule;soxr;SLACK-14_1;;https://github.com/gdsotirov/soxr.SlackBuild.git
 2016-09-16 16:12:09 +0300;submodule;x265;SLACK-14_1;;https://github.com/gdsotirov/x265.SlackBuild.git
 2016-09-18 15:32:31 +0300;submodule;vid.stab;SLACK-14_1;;https://github.com/gdsotirov/vid.stab.SlackBuild.git
+2016-09-20 08:42:30 +0300;files;search_req;main;Script to chck in slack-required and slack-suggests files for a given package name;
 2016-09-20 09:52:55 +0300;submodule;libssh2;SLACK-14_1;;https://github.com/gdsotirov/libssh2.SlackBuild.git
 2016-09-20 16:22:17 +0300;submodule;freerdp;SLACK-14_0;;https://github.com/gdsotirov/freerdp.SlackBuild.git
 2016-09-22 12:10:06 +0300;submodule;kvazaar;SLACK-14_1;;https://github.com/gdsotirov/kvazaar.SlackBuild.git

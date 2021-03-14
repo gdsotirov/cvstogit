@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [ -z $1 ]; then
+  echo "Usage: $0 <name>"
+  exit 0
+fi
+
+find . -type f \( -name slack-required -o -name slack-suggests -o -name slack-conflicts \) -exec grep -H -n "$1" {} \;
+

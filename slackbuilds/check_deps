@@ -1,0 +1,41 @@
+#!/bin/sh
+# Simple script to check presence of dependencies (packages) from the file
+# passed as its argument
+# Copyright (C) 2015 Georgi D. Sotirov <gdsotirov@dir.bg>
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+# 
+# $Id$
+# 
+
+# Bash colors
+C_GREEN=$'\e[32;01m'
+C_YELLOW=$'\e[33;01m'
+C_RED=$'\e[31;01m'
+C_BLUE=$'\e[0;34m'
+C_NORMAL=$'\e[0m'
+
+DEPS_FILE=$1
+
+for PKG in `cat $DEPS_FILE | awk '{ print $1 }'`; do
+  PKG_FILE=`ls /var/log/packages/${PKG}-[0-9]* 2>/dev/null`
+  echo -n "Checking package '$PKG': "
+  if [ -e "$PKG_FILE" ]; then
+    echo -e "\t\t\t${C_GREEN}OK${C_NORMAL}. Found `basename $PKG_FILE`";
+  else
+    echo -e "\t\t\t${C_RED}Not found${C_NORMAL}"
+  fi
+done
+
