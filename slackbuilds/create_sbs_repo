@@ -115,6 +115,25 @@ function move {
   return $res
 }
 
+function reorg {
+  res=0
+
+  while IFS=';' read -r name serie; do
+    if [ ! -e "$serie" ]; then
+      mkdir "$serie"
+    fi
+
+    git mv "$name" "$serie/$name"
+    ((res += $?))
+  done < ${CWD}/reorg_series.csv
+
+  GIT_COMMITTER_DATE="$1" \
+    git commit --no-gpg-sign --date "$1" --message "$2"
+  ((res += $?))
+
+  return $res
+}
+
 function sm_set_branch {
   res=0
 
@@ -190,6 +209,11 @@ while IFS=';' read -r rev_date rev_type rev_name rev_branch rev_message rev_repo
       move_to=$(echo $rev_name | cut -d : -f 2)
       echo -n "moving ${move_from} to ${move_to}... "
       move "$rev_date" "$move_from" "$move_to" "$rev_message" >/dev/null 2>&1
+      echo_status
+      ;;
+    reorg)
+      echo -n "reorganizing in series... "
+      reorg "$rev_date" "$rev_message" >/dev/null 2>&1
       echo_status
       ;;
     sm_branch)
