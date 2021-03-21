@@ -248,6 +248,7 @@ Date;Type;Name;Branch;Message;Repo
 2011-03-22 00:54:22 +0200;submodule;libreoffice-helppack;SLACK-13_1;;https://github.com/gdsotirov/libreoffice-helppack.SlackBuild.git
 2011-04-25 16:37:00 +0300;branch;;SLACK-13_37;;
 2011-05-01 18:35:59 +0300;files;slack-package.conf-6;main;Touch for Slackware 13.37;
+2011-05-01 23:55:59 +0300;reorg;;main;Reorganize in series;
 ;switch;;SLACK-13_1;;
 2011-10-09 22:42:54 +0300;files;slack-package.conf-51;SLACK-13_1;Fix support for 64-bit;
 ;switch;;main;;
@@ -260,7 +261,7 @@ Date;Type;Name;Branch;Message;Repo
 2012-01-22 19:18:12 +0200;submodule;ctemplate;SLACK-13_1;;https://github.com/gdsotirov/ctemplate.SlackBuild.git
 2012-06-30 18:51:21 +0300;submodule;pcsc-omnikey;SLACK-13_37;;https://github.com/gdsotirov/pcsc-omnikey.SlackBuild.git
 2012-08-19 15:46:40 +0300;files;slack-package.conf-9;main;Allow modification of ARCH from environment;
-2012-08-25 13:30:33 +0300;move;leptonlib:leptonica;main;Rename leptonica module;
+2012-08-25 13:30:33 +0300;move;l/leptonlib:l/leptonica;main;Rename leptonica module;
 2012-09-15 10:58:21 +0300;submodule;opus;SLACK-13_37;;https://github.com/gdsotirov/opus.SlackBuild.git
 2012-09-17 12:45:23 +0300;submodule;libconfig;SLACK-13_37;;https://github.com/gdsotirov/libconfig.SlackBuild.git
 2012-09-17 14:18:30 +0300;submodule;libdbus-c++;SLACK-13_37;;https://github.com/gdsotirov/libdbus-cpp.SlackBuild.git
@@ -326,7 +327,7 @@ Date;Type;Name;Branch;Message;Repo
 2016-10-08 17:08:04 +0300;submodule;tesseract;SLACK-14_0;;https://github.com/gdsotirov/tesseract.SlackBuild.git
 2016-10-08 18:47:15 +0300;submodule;tesseract-lang;SLACK-14_0;;https://github.com/gdsotirov/tesseract-lang.SlackBuild.git
 2016-10-09 17:48:12 +0300;submodule;libebur128;SLACK-14_1;;https://github.com/gdsotirov/libebur128.SlackBuild.git
-2016-10-13 14:43:52 +0300;move;openoffice.org:openoffice;;Rename to just openoffice;
+2016-10-13 14:43:52 +0300;move;xap/openoffice.org:xap/openoffice;;Rename to just openoffice;
 2016-10-14 12:33:43 +0300;submodule;openoffice-langpack;SLACK-14_1;;https://github.com/gdsotirov/openoffice-langpack.SlackBuild.git
 2016-10-25 18:22:21 +0300;submodule;elinks;SLACK-14_0;;https://github.com/gdsotirov/elinks.SlackBuild.git
 2016-11-07 12:48:18 +0200;submodule;jdk;SLACK-13_37;;https://github.com/gdsotirov/jdk.SlackBuild.git
