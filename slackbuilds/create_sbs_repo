@@ -96,6 +96,11 @@ function merge {
     ((res += $?))
   fi
 
+  # Resolve everything else
+  for conflict in $(git diff --name-only --diff-filter=U); do
+    git add $conflict
+  done
+
   GIT_COMMITTER_DATE="$1" \
     git commit --no-gpg-sign --date "$1" --message "$4"
   ((res += $?))
