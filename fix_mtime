@@ -1,12 +1,8 @@
 #!/bin/sh
 # Set file modification date to date of last revision of file as in CVS
 
-IFS="
-"
-for FILE in $(git ls-files)
-do
-    TIME=$(git log --pretty=format:%cd -n 1 --date=iso -- "$FILE")
-    TIME=$(date -d "$TIME" +%Y%m%d%H%M.%S)
-    touch -m -t "$TIME" "$FILE"
+for FILE in $(git ls-files); do
+    DATE=$(git log --pretty=format:%cd -n 1 --date=iso -- "$FILE")
+    touch -m --date "$DATE" "$FILE"
 done
 
